@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, piitial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário - MaPOA</title>
+</head>
+<body>
+    <header>
+    <div class="background-azul">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"> MaPOA</a>
+                </div>
+                <ul class="ul">
+                    <li> <a href="#">Início</a></li>
+                    <li> <a href="#">Mapa</a></li>
+                    <li> <a href="#">Formulário</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form id="pii" style="display:flex">
+            <fieldset data-pii="1" class="pii-question">
+                <label class="pii-input-label" for="1-nome">Nome completo&nbsp;<span class="ob">*</span></label>
+                <input name="nome" class="pii-input" id="1-nome" type="text" required>
+            </fieldset>
+            
+            <fieldset data-pii="2" class="pii-question">
+                <label class="pii-input-label" for="2-escola">Escola&nbsp;<span class="ob">*</span></label>
+                <select name="escola" class="pii-input" id="2-escola" list="escolas" type="text" placeholder="Selecione" required>
+                    <option value="" id="escolas-empty">Selecione...</option>
+                    <option value="lorem">Escola Municipal Lorem</option>
+                    <option value="ipsum">Escola Ipsum</option>
+                    <option value="dolor">Escola Santa Dolor</option>
+                    <option value="sit">Escola Professor Sit</option>
+                    <option value="amet">Escola Amet</option>
+                    <option value="a">Alpha</option>
+                    <option value="a">Beta</option>
+                    <option value="a">Gamma</option>
+                    <option value="a">Delta</option>
+                    <option value="a">Epsilon</option>
+                    <option value="a">Zeta</option>
+                    <option value="a">Eta</option>
+                    <option value="a">Theta</option>
+                    <option value="a">Iota</option>
+                    <option value="a">Kappa</option>
+                    <option value="a">Lambda</option>
+                    <option value="a">Mu</option>
+                </select>
+            </fieldset>
+
+            <fieldset data-pii="3" class="pii-question">
+                <label class="pii-input-label" for="3-email">Email de matrícula válido&nbsp;<span class="ob">*</span></label>
+                <input name="email" class="pii-input" id="3-email" type="text" required>
+            </fieldset>
+
+            <fieldset data-pii="4" class="pii-question">
+                <p class="pii-4">Em qual nível de estudo você está?&nbsp;<span class="ob">*</span></p>
+                <div name="estudo" class="pii-radio">
+                    <input class="pii-radio-input" id="4-q1" type="radio" name="4" required>
+                    <label class="pii-radio-label" for="4-q1">Ensino Médio</label>
+                </div>
+                <div name="estudo" class="pii-radio">
+                    <input class="pii-radio-input" id="4-q2" type="radio" name="4" required>
+                    <label class="pii-radio-label" for="4-q2">Ensino Superior</label>
+                </div>
+            </fieldset>
+            <button id="pii-submit" type="submit" >Avançar</button>
+        </form>
+        
+        <form id="main-form" style="display:none">
+            <p class="addenda">Preencha, no mínimo, cinco respostas</p>
+            <p class="addenda">Comentários são opcionais, e campos em branco serão ignorados</p>
+            <p id="q">Que nota de 0 a 5 estrelas você daria, em sua escola, para:</p>
+            <fieldset class="question" data-question="0">
+                <label class="question-label" for="question-0">Qualidade das escadas?</label>
+                <input class="rating" id="question-0"  type="range" min="1" max="5" value="0">
+                    <div class="rating-stars">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                <div class="test"></div>
+                <div class="button-container">
+                    <button type="button" class="clear-stars">Zero estrelas</button>
+                    <button type="button" class="clear-answer">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <fieldset class="question" data-question="1">
+                <label class="question-label" for="question-1">Qualidade do uniforme?</label>
+                <input class="rating" id="question-1" type="range" min="1" max="5" value="0">
+                    <div class="rating-stars">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                <div class="test">0</div>
+                <div class="button-container">
+                    <button type="button" class="clear-stars">Zero estrelas</button>
+                    <button type="button" class="clear-answer">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-1">Comentários adicionais:</label>
+                    <input id="comments-1" type="text">
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <fieldset class="question" data-question="2">
+                <label class="question-label" for="question-2">Qualidade do almoço?</label>
+                <input class="rating" id="question-2" type="range" min="1" max="5" value="0">
+                    <div class="rating-stars">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    </div>
+                <div class="test">0</div>
+                <div class="button-container">
+                    <button type="button" class="clear-stars">Zero estrelas</button>
+                    <button type="button" class="clear-answer">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-2">Comentários adicionais:</label>
+                    <input id="comments-2" type="text">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <script src="form.js"></script>
+</body>
+</html>
