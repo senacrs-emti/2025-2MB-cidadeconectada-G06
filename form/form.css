@@ -145,6 +145,15 @@ fieldset {
     max-width: 100%;
 }
 
+.addenda {
+    color: #0f6f9b;
+    font-style: italic;
+}
+
+.addenda + .addenda {
+    margin-top: 10px;
+}
+
 #q {
     font-size: 22px;
     font-weight: bold;
@@ -164,30 +173,38 @@ fieldset {
     font-weight: bold;
 }
 
-.rating {
-    margin-top: 35px;
-    width: 340px;
-    /*opacity: 0;*/
+.rating-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: min(5%, 5vw);
 }
 
-.rating:hover {
+.radio-container {
+    width: 32px;
+    height: 32px;
+}
+
+.rating-radio {
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+
+.rating-radio:hover {
     cursor: pointer;
 }
 
-.rating-stars {
+.star-icon {
     position: relative;
-    bottom: 47.5px;
-    display: grid;
-    width: 400px;
-    max-width: 100%;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    user-select: none;
+    top: -36px;
+    width: 32px;
+    height: 32px;
     z-index: -1;
-}
-
-.rating-stars span {
-    font-size: min(15vw, 50px);
+    transition: 0.1s;
 }
 
 .button-container {
@@ -195,15 +212,47 @@ fieldset {
     flex-direction: row;
     justify-content: center;
     margin: 0;
-    margin-top: -30px;
+    margin-top: auto;
     gap: 20px;
     max-width: 100%;
 }
 
-.button-container button {
+.main-button {
     font-size: var(--fonteform);
-    width: 120px;
+    width: 110px;
     padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    border-radius: 12px;
+    background-color: #31b1ec;
+    color: white;
+    transition: 0.1s;
+    font-size: 11pt;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    background-color: #ff6e0e;
+    color: white;
+}
+
+.zero-pressed {
+    background-color: #ff6e0e;
+    color: white;
+}
+
+.star-count-container {
+    display: flex;
+    justify-content: center;
+}
+
+.star-count {
+    font-weight: bold;
+    font-size: 11pt;
+    font-style: italic;
+    color: #0f6f9b;
+    margin-top: -25px;
+    margin-bottom: 15px;
 }
 
 .comments {
@@ -213,14 +262,20 @@ fieldset {
     flex-direction: column;
 }
 
+.comments-label {
+    font-size: 12pt;
+}
+
 .comments input {
     border-color: #666;
     border-top: none;
     border-left: none;
     border-right: none;
     font-size: 12pt;
-    margin-top: 10px;
+    margin-top: 8px;
     padding-bottom: 4px;
+    font-size: var(--fonteform);
+
 }
 
 .comments input:focus {
@@ -233,13 +288,4 @@ hr {
     width: 200px;
     border: none;
     border-top: 2px solid #0a8ac5;
-}
-
-.addenda {
-    color: #0f6f9b;
-    font-style: italic;
-}
-
-.addenda + .addenda {
-    margin-top: 10px;
 }
