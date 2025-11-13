@@ -53,6 +53,99 @@ nav{
 
 /****************************************************/
 
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+#sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: calc(5vw + 10px);
+    background-color: #32708c;
+    border-radius: 0 0 1vw 1vw;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#sticky-header-position {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#prog-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.go {
+    display: inline-block;
+    height: calc(3vw + 4px);
+    width: calc(3vw + 4px);
+    font-size: calc(2vw + 0.5px);
+    text-align: center;
+    line-height: calc(1.4vw - 0.5px);
+    background-color: #31b1ec;
+    color: white;
+    border: 0;
+    border-radius: 1vw;
+    transition: 0.1s;
+}
+
+.go:hover {
+    cursor: pointer;
+    background-color: #ff6e0e;
+}
+
+.go:disabled {
+    background-color: hsl(196, 12%, 35%);
+    color: hsl(190, 5%, 78%);
+}
+
+.go:disabled:hover {
+    cursor: default;
+}
+
+progress {
+    margin: 0 2vw;
+    padding: 0 5vw;
+}
+
+#main-form-send {
+    height: calc(3vw + 5px);
+    width: 100%;
+    padding: 0 0.8vw;
+    font-size: calc(1.2vw + 2px);
+    color: white;
+    border: 0;
+    border-radius: 1vw;
+    transition: 0.1s;
+}
+
+#main-form-send:hover {
+    cursor: pointer;
+}
+
+.incompleto {
+    background-color: #31b1ec;
+    color: white;
+}
+
+.completo {
+    background-color: #0062ff;
+    color: white;
+    box-shadow: 0px 0px 10px #00aeff;
+    font-weight: bold;
+}
+
+#main-form-send:disabled {
+    background-color: hsl(196, 12%, 35%);
+    color: hsl(190, 5%, 78%);
+}
+
 main {
     margin: 0 auto;
     display: flex;
@@ -236,7 +329,7 @@ fieldset {
     color: white;
 }
 
-.zero-pressed {
+.zero:disabled {
     background-color: #ff6e0e;
     color: white;
 }
@@ -275,7 +368,6 @@ fieldset {
     margin-top: 8px;
     padding-bottom: 4px;
     font-size: var(--fonteform);
-
 }
 
 .comments input:focus {
@@ -288,4 +380,12 @@ hr {
     width: 200px;
     border: none;
     border-top: 2px solid #0a8ac5;
+}
+
+footer {
+    position: sticky;
+    background-color: #777777;
+    width: 100%;
+    height: 10%;
+    bottom: 0%;
 }

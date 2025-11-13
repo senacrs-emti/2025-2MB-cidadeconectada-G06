@@ -7,25 +7,37 @@
     <title>Formulário - MaPOA</title>
 </head>
 <body>
-    <header>
-    <div class="background-azul">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="index.html"> MaPOA</a>
-                </div>
-                <ul class="ul">
-                    <li> <a href="#">Início</a></li>
-                    <li> <a href="#">Mapa</a></li>
-                    <li> <a href="#">Formulário</a></li>
-                </ul>
+    <header id="main-header">
+        <div class="background-azul">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html"> MaPOA</a>
+                    </div>
+                    <ul class="ul">
+                        <li> <a href="#">Início</a></li>
+                        <li> <a href="#">Mapa</a></li>
+                        <li> <a href="#">Formulário</a></li>
+                    </ul>
+                </nav>
             </div>
-            </nav>
+        </div>
+    </header>
+    <header id="sticky-header" style="display: none">
+        <div id="sticky-header-position">
+            <div id="prog-container">
+                <button class="go" onclick="forward()" disabled="">⮜</button>
+                <progress value="0" max="4"></progress>
+                <button class="go" onclick="backward()">⮞</button>
+            </div>
+            <div id="main-form-send-container">
+                <button id="main-form-send" class="incompleto" form="main-form" disabled>Enviar incompleto</button>
+            </div>
         </div>
     </header>
     <main>
-        <form id="pii" style="display:none">
-        <!--<form id="pii" style="display:flex">-->
+        <!--<form id="pii" style="display:none">-->
+        <form id="pii" style="display:flex">
             <fieldset data-pii="1" class="pii-question">
                 <label class="pii-input-label" for="1-nome">Nome completo&nbsp;<span class="ob">*</span></label>
                 <input name="nome" class="pii-input" id="1-nome" type="text" required>
@@ -74,8 +86,8 @@
             <button id="pii-submit" type="submit" >Avançar</button>
         </form>
         
-        <!--<form id="main-form" style="display:none">-->
-            <form id="main-form">
+        <form id="main-form" style="display:none">
+        <!--<form id="main-form">-->
             <p class="addenda">Preencha, no mínimo, cinco respostas</p>
             <p class="addenda">Comentários são opcionais, e campos em branco serão ignorados</p>
             <p id="q">Que nota de 0 a 5 estrelas você daria, em sua escola, para:</p>
@@ -105,8 +117,8 @@
                     </div>
                 <p class="star-count">estrelas</p>
                 <div class="button-container">
-                    <button type="button" class="main-button zero not-pressed">Zero estrelas</button>
-                    <button type="button" class="main-button clear-answer not-pressed">Limpar</button>
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
                 </div>
                 <div class="comments">
                     <label for="comments-0" class="comments-label">Comentários adicionais:</label>
@@ -144,8 +156,8 @@
                     <p class="star-count">estrelas</p>
                 </div>
                 <div class="button-container">
-                    <button type="button" class="main-button zero not-pressed">Zero estrelas</button>
-                    <button type="button" class="main-button clear-answer not-pressed">Limpar</button>
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
                 </div>
                 <div class="comments">
                     <label for="comments-0" class="comments-label">Comentários adicionais:</label>
@@ -181,8 +193,8 @@
                     </div>
                 <p class="star-count">estrelas</p>
                 <div class="button-container">
-                    <button type="button" class="main-button zero not-pressed">Zero estrelas</button>
-                    <button type="button" class="main-button clear-answer not-pressed">Limpar</button>
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
                 </div>
                 <div class="comments">
                     <label for="comments-0" class="comments-label">Comentários adicionais:</label>

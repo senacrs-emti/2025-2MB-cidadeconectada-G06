@@ -1,6 +1,8 @@
 const piiForm = document.getElementById('pii');
 const piiSubmit = document.getElementById("pii-submit");
 const mainForm = document.getElementById('main-form');
+const sticky = document.getElementById('sticky-header');
+
 const questions = document.querySelectorAll('.question');
 let answeredQuestions = 0;
 
@@ -9,6 +11,7 @@ piiForm.addEventListener('submit', (e) => {
 
     piiForm.style.display = "none";
     mainForm.style.display = "flex";
+    sticky.style.display = "block";
 });
 
 // -1: questão pulada
@@ -57,7 +60,9 @@ questions.forEach(question => {
             updateStars(questionValue);
             console.log(`${questionValue}`);
 
+            zero.disabled = false;
             zero.classList.remove("pressed");
+            clearAnswer.classList.remove("pressed");
 
             starCount.style.display = "flex";
 
@@ -86,43 +91,62 @@ questions.forEach(question => {
                 default:
                     starCount.style.color = "#d00"
             }
+
+            if (!question.classList.contains("answered")) {
+                question.classList.add("answered");
+                answeredQuestions++;
+                console.log("answeredQuestions: " + answeredQuestions)
+            };
         });
+
         updateStars(0);
     });
 
     zero.onclick = function zeroStars() {
-        if (zero.classList.contains("not-pressed")) {
+        if (!zero.classList.contains("pressed")) {
             questionValue = 0;
             updateStars(0);
             console.log(`${questionValue}`);
 
-            zero.classList.remove("not-pressed");
-            clearAnswer.classList.add("not-pressed");
+            zero.classList.add("pressed");
+            clearAnswer.classList.remove("pressed");
 
-            zero.classList.add("zero-pressed");
+            zero.disabled = true;
 
             starCount.style.display = "flex";
             starCount.innerHTML = `${questionValue} estrelas`;
             starCount.style.color = "#d00"
 
             console.log("zero clicked!")
+
+            if (!question.classList.contains("answered")) {
+                question.classList.add("answered");
+                answeredQuestions++;
+                console.log("answeredQuestions: " + answeredQuestions)
+            };
         }
     }
 
     clearAnswer.onclick = function clearAnswers() {
-        if (clearAnswer.classList.contains("not-pressed")) {
+        if (!clearAnswer.classList.contains("pressed")) {
             questionValue = -1;
             updateStars(0);
             console.log(`${questionValue}`);
 
-            clearAnswer.classList.remove("not-pressed");
-            zero.classList.add("not-pressed");
+            clearAnswer.classList.add("pressed");
+            zero.classList.remove("pressed");
 
-            zero.classList.remove("zero-pressed");
+            zero.disabled = false;
 
             starCount.style.display = "none";
 
             console.log("clearAnswer clicked!")
+
+            if (question.classList.contains("answered")) {
+                question.classList.remove("answered");
+                answeredQuestions--;
+                console.log("answeredQuestions: " + answeredQuestions)
+            };
         }
     }
 });
