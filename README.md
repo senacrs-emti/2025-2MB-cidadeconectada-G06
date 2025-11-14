@@ -1,16 +1,23 @@
+# 👥 **8. Equipe**
+
+- 👤 **Guilherme Rodrigues** – Função  
+- 👤 **Mia Vieira** – Função  
+- 👤 **Lorenzo Emiliano** – Função  
+- 👤 **Clara Elisa** – Função  
+
 # 📘 **1. Introdução**
 
-Este projeto tem como objetivo analisar a **infraestrutura das escolas públicas a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
+O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
----
+
 
 # 🎯 **2. Objetivos**
-- Mapear escolas públicas na área municipal de Porto Alegre.
-- Analisar as perspectivas dos alunos a respeito de suas escolas, a partir de suas respostas a um formulário com perguntas pontuais.
-- Propor melhorias viáveis para aquela instituição a partir dessa análise.
-  
----
+- Mapear escolas.
+- Analisar as perspectivas dos alunos a respeito de suas escolas.
+- A partir do conhecimento obtido a cerca daquelas instuituições, 
+- A partir dessa análise propor melhorias para aquela instituição.
+
 
 # 🧠 **3. Justificativa**
 
@@ -18,7 +25,7 @@ A infraestrutura escolar exerce forte impacto no **desempenho**, **motivação**
 Ambientes inadequados podem prejudicar a aprendizagem, enquanto espaços bem estruturados favorecem o desenvolvimento e participação.  
 Por isso, entender como os estudantes enxergam esses espaços é essencial para orientar mudanças significativas.
 
----
+
 
 # 🧩 **4. Metodologia**
 
@@ -30,7 +37,7 @@ A execução do projeto foi organizada em etapas:
 4. 📝 **Discussão dos dados** e extração de conclusões.  
 5. 🛠️ **Uso de ferramentas** como Google Forms, Excel e GitHub para organização e apresentação.
 
----
+
 
 # 📊 **5. Resultados Esperados**
 
@@ -40,14 +47,14 @@ A execução do projeto foi organizada em etapas:
 - Criação de gráficos que facilitem a visualização das percepções gerais.  
 - Apoio à gestão escolar na tomada de decisões.
 
----
+
 
 # 💡 **6. Conclusão**
 
 O estudo busca mostrar como a visão dos alunos pode contribuir diretamente para a melhoria da escola.  
 Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, eficiente e adequado para o aprendizado.
 
----
+
 
 # 🧰 **7. Ferramentas Utilizadas**
 
@@ -65,20 +72,6 @@ Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, ef
 
 </div>
 
----
 
-# 👥 **8. Equipe**
+ 
 
-- 👤 **Guilherme Rodrigues** – Função  
-- 👤 **Mia Vieira** – Função  
-- 👤 **Lorenzo Emiliano** – Função  
-- 👤 **Clara Elisa** – Função  
-
----
-
-# 📚 **9. Referências**
-
-- Documentos e diretrizes da escola.  
-- Artigos e estudos sobre infraestrutura escolar.  
-- Leis relacionadas à educação.  
-- Materiais complementares utilizados na pesquisa.
