@@ -13,6 +13,7 @@ mainFormSend.innerHTML = "Enviar incompleto"
 const qs1 = document.getElementById('qs-1');
 const qs2 = document.getElementById('qs-2');
 const qs3 = document.getElementById('qs-3');
+const qs4 = document.getElementById('qs-4');
 
 document.getElementById('backward').disabled = true
 
@@ -25,17 +26,19 @@ piiForm.addEventListener('submit', (e) => {
     piiForm.style.display = "none";
     mainForm.style.display = "flex";
     sticky.style.display = "block";
+
+    window.scrollTo(0, 0)
 });
 
 function checkSend() {
-    if (answeredQuestions < 5) {
+    if (answeredQuestions < 7) {
         mainFormSend.disabled = true
         mainFormSend.classList.remove('completo')
         mainFormSend.classList.add('incompleto')
         mainFormSend.innerHTML = "Enviar incompleto"
         console.log(':(')
 
-    } else if (answeredQuestions >= 5 && answeredQuestions < 12) {
+    } else if (answeredQuestions >= 7 && answeredQuestions < 12) {
         mainFormSend.disabled = false
         mainFormSend.classList.remove('completo')
         mainFormSend.classList.add('incompleto')
@@ -124,7 +127,7 @@ questions.forEach(question => {
                     starCount.style.color = "#3cc200"
                     break;
                 case 4:
-                    starCount.style.color = "#00b79c"
+                    starCount.style.color = "#00ba9eff"
                     break;
                 case 5:
                     starCount.style.color = "#007fff"
@@ -145,6 +148,8 @@ questions.forEach(question => {
 
     zero.onclick = function zeroStars() {
         if (!zero.classList.contains("pressed")) {
+            ratingRadios.checked = false;
+
             questionValue = 0;
             updateStars(0);
             console.log(`${questionValue}`);
@@ -171,6 +176,8 @@ questions.forEach(question => {
 
     clearAnswer.onclick = function clearAnswers() {
         if (!clearAnswer.classList.contains("pressed")) {
+            ratingRadios.checked = false
+
             questionValue = -1;
             updateStars(0);
             console.log(`${questionValue}`);
@@ -195,10 +202,14 @@ questions.forEach(question => {
 });
 
 function backward() {
-    if (qs3.style.display == "block") {
-        qs2.style.display = "block";
+    if (qs4.style.display == "block") {
+        qs3.style.display = "block";
         document.getElementById('forward').disabled = false;
-        document.getElementById('progress-bar-colour').style.width = "50%"
+        document.getElementById('progress-bar-colour').style.width = "66%"
+        qs4.style.display = "none";
+    } else if (qs3.style.display == "block") {
+        qs2.style.display = "block";
+        document.getElementById('progress-bar-colour').style.width = "33%"
         qs3.style.display = "none";
     } else {
         qs1.style.display = "block";
@@ -212,12 +223,16 @@ function forward() {
     if (qs1.style.display == "block") {
         qs2.style.display = "block";
         document.getElementById('backward').disabled = false;
-        document.getElementById('progress-bar-colour').style.width = "50%"
+        document.getElementById('progress-bar-colour').style.width = "33%"
         qs1.style.display = "none";
-    } else {
+    } else if (qs2.style.display == "block") {
         qs3.style.display = "block";
+        document.getElementById('progress-bar-colour').style.width = "66%"
+        qs2.style.display = "none";
+    } else {
+        qs4.style.display = "block";
         document.getElementById('forward').disabled = true;
         document.getElementById('progress-bar-colour').style.width = "100%"
-        qs2.style.display = "none";
+        qs3.style.display = "none";
     }
 }

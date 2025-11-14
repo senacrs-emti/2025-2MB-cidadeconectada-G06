@@ -62,9 +62,9 @@ button {
     top: 0;
     width: 100%;
     height: calc(5vw + 10px);
-    background-color: #32708c;
+    background-image: linear-gradient(to bottom, #32708c, #2b5a80);
     border-radius: 0 0 1vw 1vw;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 2px 2px -2px gray;
 }
 
 #sticky-header-position {
@@ -125,7 +125,7 @@ button {
 }
 
 #progress-bar-colour {
-    background-color: #ff7f2a;
+    background-image: linear-gradient(#ff952a, #ff7f2a, #ff5c2a);
     height: 100%;
     width: 5%;
     border-radius: 2vw;
@@ -411,10 +411,11 @@ fieldset {
     border-top: none;
     border-left: none;
     border-right: none;
-    font-size: 12pt;
-    margin-top: 8px;
+    font-size: 11pt;
+    margin-top: 7px;
+    padding-top: 0;
     padding-bottom: 4px;
-    font-size: var(--fonteform);
+    font-family: 'Poppins', sans-serif;
 }
 
 .comments input:focus {
@@ -433,4 +434,8 @@ hr {
     width: 200px;
     border: none;
     border-top: 2px solid #0a8ac5;
+}
+
+#main-form fieldset:last-of-type {
+    margin-bottom: 60px;
 }
