@@ -35,7 +35,7 @@ function checkSend() {
         mainFormSend.innerHTML = "Enviar incompleto"
         console.log(':(')
 
-    } else if (answeredQuestions >= 5 < 12) {
+    } else if (answeredQuestions >= 5 && answeredQuestions < 12) {
         mainFormSend.disabled = false
         mainFormSend.classList.remove('completo')
         mainFormSend.classList.add('incompleto')
