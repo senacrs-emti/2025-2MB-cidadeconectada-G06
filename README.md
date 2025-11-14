@@ -1,25 +1,25 @@
-# 👥 **8. Equipe**
+# 👥 **#01. Equipe**
 
 - 👤 **Guilherme Rodrigues** – Função  
 - 👤 **Mia Vieira** – Função  
 - 👤 **Lorenzo Emiliano** – Função  
 - 👤 **Clara Elisa** – Função  
 
-# 📘 **1. Introdução**
+# 📘 **#02. Introdução**
 
 O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
 
 
-# 🎯 **2. Objetivos**
+# 🎯 **#03. Objetivos**
 - Mapear escolas.
 - Analisar as perspectivas dos alunos a respeito de suas escolas.
 - A partir do conhecimento obtido a cerca daquelas instuituições, 
 - A partir dessa análise propor melhorias para aquela instituição.
 
 
-# 🧠 **3. Justificativa**
+# 🧠 **#04. Justificativa**
 
 A infraestrutura escolar exerce forte impacto no **desempenho**, **motivação** e **bem-estar** dos alunos.  
 Ambientes inadequados podem prejudicar a aprendizagem, enquanto espaços bem estruturados favorecem o desenvolvimento e participação.  
@@ -27,7 +27,7 @@ Por isso, entender como os estudantes enxergam esses espaços é essencial para 
 
 
 
-# 🧩 **4. Metodologia**
+# 🧩 **#05. Metodologia**
 
 A execução do projeto foi organizada em etapas:
 
@@ -39,7 +39,7 @@ A execução do projeto foi organizada em etapas:
 
 
 
-# 📊 **5. Resultados Esperados**
+# 📊 **#06. Resultados Esperados**
 
 - Identificação dos principais pontos de reclamação dos alunos.  
 - Levantamento dos espaços mais bem avaliados e daqueles que precisam de maior atenção.  
@@ -49,14 +49,14 @@ A execução do projeto foi organizada em etapas:
 
 
 
-# 💡 **6. Conclusão**
+# 💡 **#07. Conclusão**
 
 O estudo busca mostrar como a visão dos alunos pode contribuir diretamente para a melhoria da escola.  
 Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, eficiente e adequado para o aprendizado.
 
 
 
-# 🧰 **7. Ferramentas Utilizadas**
+# 🧰 **#08. Ferramentas Utilizadas**
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
 
