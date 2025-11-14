@@ -1,21 +1,20 @@
 # 👥 **#01. Equipe**
 
-- 👤 **Guilherme Rodrigues** – Função  
-- 👤 **Mia Vieira** – Função  
-- 👤 **Lorenzo Emiliano** – Função  
-- 👤 **Clara Elisa** – Função  
+- 👤 **Guilherme Rodrigues**  
+- 👤 **Mia Vieira**  
+- 👤 **Lorenzo Emiliano**   
+- 👤 **Clara Elisa** 
 
 # 📘 **#02. Introdução**
 
-O presente projeto tem como objetivo analisar a **infraestrutura escolar pública a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
+O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, visando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
 
 
 # 🎯 **#03. Objetivos**
 - Mapear escolas.
-- Analisar as perspectivas dos alunos a respeito de suas escolas.
-- A partir do conhecimento obtido a cerca daquelas instuituições, 
+- Analisar as perspectivas dos alunos a respeito de suas escolas. 
 - A partir dessa análise propor melhorias para aquela instituição.
 
 
@@ -29,13 +28,12 @@ Por isso, entender como os estudantes enxergam esses espaços é essencial para 
 
 # 🧩 **#05. Metodologia**
 
-A execução do projeto está sendo organizada em etapas:
+A execução do projeto está sendo organizada:
 
 1. 📄 **Elaboração e aplicação de questionários** para os alunos.  
-2. 📊 **Coleta, tabulação e análise dos dados** obtidos.  
-3. 📈 **Produção de gráficos e tabelas** representando os resultados.  
-4. 📝 **Discussão dos dados** e extração de conclusões.  
-5. 🛠️ **Uso de ferramentas** como Google Forms, Excel e GitHub para organização e apresentação.
+2. 📊 **Coleta e análise dos dados** obtidos.   
+3. 📝 **Discussão dos dados** e extração de conclusões.  
+4. 🛠️ **Uso de ferramentas** 
 
 
 
@@ -44,17 +42,13 @@ A execução do projeto está sendo organizada em etapas:
 - Identificação dos principais pontos de reclamação dos alunos.  
 - Levantamento dos espaços mais bem avaliados e daqueles que precisam de maior atenção.  
 - Coleta de sugestões reais dos estudantes.  
-- Criação de gráficos que facilitem a visualização das percepções gerais.  
 - Apoio à gestão escolar na tomada de decisões.
 
 
 
 # 💡 **#07. Conclusão**
-
-O estudo busca mostrar como a visão dos alunos pode contribuir diretamente para a melhoria da escola.  
-Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, eficiente e adequado para o aprendizado.
-
-
+O nosso estudo busca mostrar como a visão dos alunos é crucial quanto à melhora da escola, 
+ao analisarmos suas percepções, é possível criar um ambiente mais acolhedor, eficaz e adequado para o desenvolvimento dos jovens.
 
 # 🧰 **#08. Ferramentas Utilizadas**
 
