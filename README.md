@@ -6,6 +6,10 @@ A escolha do tema se justifica pela importância de ouvir quem vivencia a escola
 ---
 
 # 🎯 **2. Objetivos**
+- Mapear escolas.
+- Analisar as perspectivas dos alunos a respeito de suas escolas.
+- A partir do conhecimento obtido a cerca daquelas instuituições, 
+- A partir dessa análise propor melhorias para aquela instituição.
 
 ### 🎯 **Objetivo Geral**
 Analisar a infraestrutura escolar sob o ponto de vista dos alunos.
@@ -38,7 +42,7 @@ A execução do projeto foi organizada em etapas:
 
 ---
 
-# 📊 **5. Resultados Esperados / Parciais**
+# 📊 **5. Resultados Esperados**
 
 - Identificação dos principais pontos de reclamação dos alunos.  
 - Levantamento dos espaços mais bem avaliados e daqueles que precisam de maior atenção.  
@@ -63,12 +67,11 @@ Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, ef
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" width="50"/>
-  <img src="https://cdn-icons-png.flaticon.com/512/2965/2965323.png" width="50" title="Google Forms"/>
-  <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" width="50" title="Excel"/>
+ 
+ 
+ 
 
 </div>
 
@@ -76,10 +79,10 @@ Ao analisar suas percepções, é possível criar um ambiente mais acolhedor, ef
 
 # 👥 **8. Equipe**
 
-- 👤 **Nome 1** – Função  
-- 👤 **Nome 2** – Função  
-- 👤 **Nome 3** – Função  
-- 👤 **Nome 4** – Função  
+- 👤 **Guilherme Rodrigues** – Função  
+- 👤 **Mia Vieira** – Função  
+- 👤 **Lorenzo Emiliano** – Função  
+- 👤 **Clara Elisa** – Função  
 
 ---
 
