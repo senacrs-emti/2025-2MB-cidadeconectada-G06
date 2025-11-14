@@ -29,7 +29,7 @@ Por isso, entender como os estudantes enxergam esses espaços é essencial para 
 
 # 🧩 **#05. Metodologia**
 
-A execução do projeto foi organizada em etapas:
+A execução do projeto está sendo organizada em etapas:
 
 1. 📄 **Elaboração e aplicação de questionários** para os alunos.  
 2. 📊 **Coleta, tabulação e análise dos dados** obtidos.  
