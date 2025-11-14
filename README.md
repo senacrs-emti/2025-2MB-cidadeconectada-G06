@@ -7,7 +7,7 @@
 
 # 📘 **#02. Introdução**
 
-O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
+O presente projeto tem como objetivo analisar a **infraestrutura escolar pública a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
 
