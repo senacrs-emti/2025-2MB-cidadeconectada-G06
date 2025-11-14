@@ -1,25 +1,15 @@
 # 📘 **1. Introdução**
 
-Este projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
+Este projeto tem como objetivo analisar a **infraestrutura das escolas públicas a partir da visão dos alunos**, buscando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
 ---
 
 # 🎯 **2. Objetivos**
-- Mapear escolas.
-- Analisar as perspectivas dos alunos a respeito de suas escolas.
-- A partir do conhecimento obtido a cerca daquelas instuituições, 
-- A partir dessa análise propor melhorias para aquela instituição.
-
-### 🎯 **Objetivo Geral**
-Analisar a infraestrutura escolar sob o ponto de vista dos alunos.
-
-### 📌 **Objetivos Específicos**
-- Identificar os principais problemas estruturais percebidos pelos estudantes.  
-- Avaliar a acessibilidade, organização e conforto dos ambientes escolares.  
-- Coletar sugestões dos alunos para melhorias gerais.  
-- Comparar percepções entre diferentes turmas/anos (se aplicável).  
-
+- Mapear escolas públicas na área municipal de Porto Alegre.
+- Analisar as perspectivas dos alunos a respeito de suas escolas, a partir de suas respostas a um formulário com perguntas pontuais.
+- Propor melhorias viáveis para aquela instituição a partir dessa análise.
+  
 ---
 
 # 🧠 **3. Justificativa**
