@@ -1,7 +1,20 @@
 const piiForm = document.getElementById('pii');
 const piiSubmit = document.getElementById("pii-submit");
 const mainForm = document.getElementById('main-form');
+
 const sticky = document.getElementById('sticky-header');
+
+const mainFormSend = document.getElementById('main-form-send');
+mainFormSend.disabled = true
+mainFormSend.classList.remove('completo')
+mainFormSend.classList.add('incompleto')
+mainFormSend.innerHTML = "Enviar incompleto"
+
+const qs1 = document.getElementById('qs-1');
+const qs2 = document.getElementById('qs-2');
+const qs3 = document.getElementById('qs-3');
+
+document.getElementById('backward').disabled = true
 
 const questions = document.querySelectorAll('.question');
 let answeredQuestions = 0;
@@ -14,6 +27,34 @@ piiForm.addEventListener('submit', (e) => {
     sticky.style.display = "block";
 });
 
+function checkSend() {
+    if (answeredQuestions < 5) {
+        mainFormSend.disabled = true
+        mainFormSend.classList.remove('completo')
+        mainFormSend.classList.add('incompleto')
+        mainFormSend.innerHTML = "Enviar incompleto"
+        console.log(':(')
+
+    } else if (answeredQuestions >= 5 < 12) {
+        mainFormSend.disabled = false
+        mainFormSend.classList.remove('completo')
+        mainFormSend.classList.add('incompleto')
+        mainFormSend.innerHTML = "Enviar incompleto"
+        console.log(':|')
+
+        // mainFormSend.setAttribute(onclick, incompleteSend())
+    } else {
+        mainFormSend.disabled = false
+        mainFormSend.classList.remove('incompleto')
+        mainFormSend.classList.add('completo')
+        mainFormSend.innerHTML = "Enviar"
+        console.log(':)')
+
+        // mainFormSend.setAttribute(onclick, completeSend())
+    };
+}
+
+// PRO BANCO DE DADOS:
 // -1: questão pulada
 // 0: zero estrelas
 questions.forEach(question => {
@@ -97,8 +138,8 @@ questions.forEach(question => {
                 answeredQuestions++;
                 console.log("answeredQuestions: " + answeredQuestions)
             };
+            checkSend();
         });
-
         updateStars(0);
     });
 
@@ -124,6 +165,7 @@ questions.forEach(question => {
                 answeredQuestions++;
                 console.log("answeredQuestions: " + answeredQuestions)
             };
+            checkSend();
         }
     }
 
@@ -147,11 +189,35 @@ questions.forEach(question => {
                 answeredQuestions--;
                 console.log("answeredQuestions: " + answeredQuestions)
             };
+            checkSend();
         }
     }
 });
 
-// let questionZeroValue = document.getElementById('question-0').value;
+function backward() {
+    if (qs3.style.display == "block") {
+        qs2.style.display = "block";
+        document.getElementById('forward').disabled = false;
+        document.getElementById('progress-bar-colour').style.width = "50%"
+        qs3.style.display = "none";
+    } else {
+        qs1.style.display = "block";
+        document.getElementById('backward').disabled = true;
+        document.getElementById('progress-bar-colour').style.width = "5%"
+        qs2.style.display = "none";
+    }
+}
 
-// let piiName = document.getElementById('')
-
+function forward() {
+    if (qs1.style.display == "block") {
+        qs2.style.display = "block";
+        document.getElementById('backward').disabled = false;
+        document.getElementById('progress-bar-colour').style.width = "50%"
+        qs1.style.display = "none";
+    } else {
+        qs3.style.display = "block";
+        document.getElementById('forward').disabled = true;
+        document.getElementById('progress-bar-colour').style.width = "100%"
+        qs2.style.display = "none";
+    }
+}
