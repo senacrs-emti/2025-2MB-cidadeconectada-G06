@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, piitial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário - MaPOA</title>
+</head>
+<body>
+    <header id="main-header">
+        <div class="background-azul">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html"> MaPOA</a>
+                    </div>
+                    <ul class="ul">
+                        <li> <a href="#">Início</a></li>
+                        <li> <a href="#">Mapa</a></li>
+                        <li> <a href="#">Formulário</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <header id="sticky-header" style="display: none">
+        <div id="sticky-header-position">
+            <div id="prog-container">
+                <button id="backward" class="go" onclick="backward()" disabled="">⮜</button>
+                    <div id="progress-bar">
+                        <div id="progress-bar-colour"></div>
+                    </div>
+                <button id="forward" class="go" onclick="forward()">⮞</button>
+            </div>
+            <div id="main-form-send-container">
+                <button id="main-form-send" class="incompleto" form="main-form" disabled>Enviar incompleto</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--<form id="pii" style="display:none">-->
+        <form id="pii" style="display:flex">
+            <fieldset data-pii="1" class="pii-question">
+                <label class="pii-input-label" for="1-nome">Nome completo&nbsp;<span class="ob">*</span></label>
+                <input name="nome" class="pii-input" id="1-nome" type="text" required>
+            </fieldset>
+            
+            <fieldset data-pii="2" class="pii-question">
+                <label class="pii-input-label" for="2-escola">Escola&nbsp;<span class="ob">*</span></label>
+                <select name="escola" class="pii-input" id="2-escola" list="escolas" type="text" placeholder="Selecione" required>
+                    <option value="" id="escolas-empty">Selecione...</option>
+                    <option value="lorem">Escola Municipal Lorem</option>
+                    <option value="ipsum">Escola Ipsum</option>
+                    <option value="dolor">Escola Santa Dolor</option>
+                    <option value="sit">Escola Professor Sit</option>
+                    <option value="amet">Escola Amet</option>
+                    <option value="a">Alpha</option>
+                    <option value="a">Beta</option>
+                    <option value="a">Gamma</option>
+                    <option value="a">Delta</option>
+                    <option value="a">Epsilon</option>
+                    <option value="a">Zeta</option>
+                    <option value="a">Eta</option>
+                    <option value="a">Theta</option>
+                    <option value="a">Iota</option>
+                    <option value="a">Kappa</option>
+                    <option value="a">Lambda</option>
+                    <option value="a">Mu</option>
+                </select>
+            </fieldset>
+
+            <fieldset data-pii="3" class="pii-question">
+                <label class="pii-input-label" for="3-email">Email de matrícula válido&nbsp;<span class="ob">*</span></label>
+                <input name="email" class="pii-input" id="3-email" type="text" required>
+            </fieldset>
+
+            <fieldset data-pii="4" class="pii-question">
+                <p class="pii-4">Em qual nível de estudo você está?&nbsp;<span class="ob">*</span></p>
+                <div name="estudo" class="pii-radio">
+                    <input class="pii-radio-input" id="4-q1" type="radio" name="4" required>
+                    <label class="pii-radio-label" for="4-q1">Ensino Médio</label>
+                </div>
+                <div name="estudo" class="pii-radio">
+                    <input class="pii-radio-input" id="4-q2" type="radio" name="4" required>
+                    <label class="pii-radio-label" for="4-q2">Ensino Superior</label>
+                </div>
+            </fieldset>
+            <button id="pii-submit" type="submit" >Avançar</button>
+        </form>
+        
+        <form id="main-form" style="display:none">
+        <!--<form id="main-form">-->
+            <p class="addenda">Preencha, no mínimo, sete respostas</p>
+            <p class="addenda">Comentários são opcionais, e campos em branco serão ignorados</p>
+            <p id="q">Que nota de 0 a 5 estrelas você daria, em sua escola, para:</p>
+            <div class="question-set" id="qs-1" style="display: block">
+            <fieldset class="question" data-question="1">
+                <legend class="question-label">Infraestrutura geral?</label>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q1" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q1" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q1" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q1" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q1" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="2">
+                <legend class="question-label">Mobilidade (qualidade dos corredores, escadas...)?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q2" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q2" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q2" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q2" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q2" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container">
+                    <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                </div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="3">
+                <legend class="question-label">Qualidade do ensino?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q3" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q3" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q3" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q3" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q3" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="4">
+                <legend class="question-label">Professores?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q4" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q4" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q4" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q4" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q4" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+            </div>
+
+            <div class="question-set" id="qs-2" style="display: none;">
+                <fieldset class="question" data-question="5">
+                <legend class="question-label">Qualidade dos materiais?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q5" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q5" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q5" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q5" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q5" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="6">
+                <legend class="question-label">Qualidade do uniforme?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q6" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q6" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q6" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q6" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q6" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="7">
+                <legend class="question-label">Regras?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q7" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q7" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q7" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q7" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q7" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="8">
+                <legend class="question-label">Convívio entre os alunos?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q8" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q8" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q8" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q8" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q8" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+            </div>
+
+            <div class="question-set" id="qs-3" style="display: none;">
+                <fieldset class="question" data-question="9">
+                <legend class="question-label">Qualidade dos banheiros?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q9" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q9" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q9" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q9" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q9" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="10">
+                <legend class="question-label">Qualidade dos bebedouros?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q10" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q10" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q10" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q10" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q10" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="11">
+                <legend class="question-label">Qualidade do lanche/almoço?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q11" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q11" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q11" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q11" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q11" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="12">
+                <legend class="question-label">Acessibilidade (para cadeirantes, cegos...)?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q12" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q12" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q12" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q12" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q12" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+            </div>
+
+            <div class="question-set" id="qs-4" style="display: none;">
+                <fieldset class="question" data-question="13">
+                <legend class="question-label">Assistência pedadógica?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q13" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q13" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q13" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q13" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q13" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="14">
+                <legend class="question-label">Atividades extracurriculares?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q14" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q14" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q14" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q14" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q14" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="15">
+                <legend class="question-label">Comunicação com os pais?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q15" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q15" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q15" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q15" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q15" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+
+            <div class="centre-hr"><hr></div>
+
+            <fieldset class="question" data-question="16">
+                <legend class="question-label">A escola em geral?</legend>
+                    <div class="rating-group">
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q16" value="1">
+                            <img class="star-icon s1" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q16" value="2">
+                            <img class="star-icon s2" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q16" value="3">
+                            <img class="star-icon s3" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q16" value="4">
+                            <img class="star-icon s4" src="star-empty.webp">
+                        </span>
+                        <span class="radio-container">
+                            <input class="rating-radio" type="radio" name="q16" value="5">
+                            <img class="star-icon s5" src="star-empty.webp">
+                        </span>
+                    </div>
+                <div class="star-count-container"><p class="star-count">estrelas</p></div>
+                <div class="button-container">
+                    <button type="button" class="main-button zero">Zero estrelas</button>
+                    <button type="button" class="main-button clear-answer pressed">Limpar</button>
+                </div>
+                <div class="comments">
+                    <label for="comments-0" class="comments-label">Comentários adicionais:</label>
+                    <input id="comments-0" type="text">
+                </div>
+            </fieldset>
+            </div>
+        </form>
+    </main>
+    <script src="form.js"></script>
+</body>
+</html>
