@@ -323,18 +323,18 @@ fieldset {
     gap: min(5%, 5vw);
 }
 
-.radio-container {
+.check-container {
     width: 32px;
     height: 32px;
 }
 
-.rating-radio {
+.rating-checkbox {
     width: 32px;
     height: 32px;
     opacity: 0;
 }
 
-.rating-radio:hover {
+.rating-checkbox:hover {
     cursor: pointer;
 }
 
@@ -404,6 +404,7 @@ fieldset {
 
 .comments-label {
     font-size: 12pt;
+    font-weight: bold;
 }
 
 .comments input {

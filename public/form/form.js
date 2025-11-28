@@ -30,6 +30,14 @@ piiForm.addEventListener('submit', (e) => {
     window.scrollTo(0, 0)
 });
 
+function incompleteSend() {
+    console.log(":)")
+}
+
+function completeSend() {
+    console.log(":3")
+}
+
 function checkSend() {
     if (answeredQuestions < 7) {
         mainFormSend.disabled = true
@@ -64,7 +72,7 @@ questions.forEach(question => {
     let questionValue = -1
     console.log(`${questionValue}`);
     
-    const ratingRadios = question.querySelectorAll('.rating-radio');
+    const ratingCheckboxes = question.querySelectorAll('.rating-checkbox');
     const starIcons = question.querySelectorAll('star-icon')
 
     const s1 = question.querySelector(".s1")
@@ -98,9 +106,9 @@ questions.forEach(question => {
         };
     };
 
-    ratingRadios.forEach(ratingRadio => {
-        ratingRadio.addEventListener('input', () => {
-            questionValue = parseInt(ratingRadio.value);
+    ratingCheckboxes.forEach(ratingCheckbox => {
+        ratingCheckbox.addEventListener('input', () => {
+            questionValue = parseInt(ratingCheckbox.value);
             updateStars(questionValue);
             console.log(`${questionValue}`);
 
@@ -148,7 +156,11 @@ questions.forEach(question => {
 
     zero.onclick = function zeroStars() {
         if (!zero.classList.contains("pressed")) {
-            ratingRadios.checked = false;
+            ratingCheckboxes.checked = false;
+
+            ratingCheckboxes.forEach(ratingCheckbox => {
+                ratingCheckbox.checked = false;
+            })
 
             questionValue = 0;
             updateStars(0);
@@ -170,13 +182,18 @@ questions.forEach(question => {
                 answeredQuestions++;
                 console.log("answeredQuestions: " + answeredQuestions)
             };
+
             checkSend();
         }
     }
 
     clearAnswer.onclick = function clearAnswers() {
         if (!clearAnswer.classList.contains("pressed")) {
-            ratingRadios.checked = false
+            ratingCheckboxes.checked = false
+
+            ratingCheckboxes.forEach(ratingCheckbox => {
+                ratingCheckbox.checked = false;
+            })
 
             questionValue = -1;
             updateStars(0);
@@ -200,6 +217,12 @@ questions.forEach(question => {
         }
     }
 });
+
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName(checkbox.name)
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+})}
 
 function backward() {
     if (qs4.style.display == "block") {
