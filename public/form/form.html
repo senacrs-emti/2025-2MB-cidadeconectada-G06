@@ -46,7 +46,7 @@
             
             <fieldset data-pii="2" class="pii-question">
                 <label class="pii-input-label" for="2-escola">Escola&nbsp;<span class="ob">*</span></label>
-                <select name="escola" class="pii-input" id="2-escola" list="escolas" type="text" placeholder="Selecione" required>
+                <select name="escola" class="pii-input" id="2-escola" list="escolas" type="text" placeholder="Selecione..." required onclick="piiSchoolList()">
                     <option value="" id="escolas-empty">Selecione...</option>
                     <option value="lorem">Escola Municipal Lorem</option>
                     <option value="ipsum">Escola Ipsum</option>
@@ -54,18 +54,23 @@
                     <option value="sit">Escola Professor Sit</option>
                     <option value="amet">Escola Amet</option>
                     <option value="a">Alpha</option>
-                    <option value="a">Beta</option>
-                    <option value="a">Gamma</option>
-                    <option value="a">Delta</option>
-                    <option value="a">Epsilon</option>
-                    <option value="a">Zeta</option>
-                    <option value="a">Eta</option>
-                    <option value="a">Theta</option>
-                    <option value="a">Iota</option>
-                    <option value="a">Kappa</option>
-                    <option value="a">Lambda</option>
-                    <option value="a">Mu</option>
+                    <option value="b">Beta</option>
+                    <option value="c">Gamma</option>
+                    <option value="d">Delta</option>
+                    <option value="e">Epsilon</option>
+                    <option value="f">Zeta</option>
+                    <option value="g">Eta</option>
+                    <option value="h">Theta</option>
+                    <option value="i">Iota</option>
+                    <option value="j">Kappa</option>
+                    <option value="k">Lambda</option>
+                    <option value="l">Mu</option>
+                    <option value="outra">Outra</option>
                 </select>
+                <div id="outra" style="display:none">
+                    <label class="pii-input-label">Insira o nome da escola:&nbsp;<span class="ob">*</span></label>
+                    <input class="pii-input" type="text">
+                </div>
             </fieldset>
 
             <fieldset data-pii="3" class="pii-question">

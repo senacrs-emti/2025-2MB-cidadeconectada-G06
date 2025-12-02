@@ -10,6 +10,8 @@ mainFormSend.classList.remove('completo')
 mainFormSend.classList.add('incompleto')
 mainFormSend.innerHTML = "Enviar incompleto"
 
+const piiSelectSchool = document.getElementById('2-escola')
+
 const qs1 = document.getElementById('qs-1');
 const qs2 = document.getElementById('qs-2');
 const qs3 = document.getElementById('qs-3');
@@ -19,6 +21,14 @@ document.getElementById('backward').disabled = true
 
 const questions = document.querySelectorAll('.question');
 let answeredQuestions = 0;
+
+function piiSchoolList() {
+    if (piiSelectSchool.value == "outra"){
+        document.getElementById('outra').style.display = "block"
+    } else {
+        document.getElementById('outra').style.display = "none"
+    }
+}
 
 piiForm.addEventListener('submit', (e) => {
     e.preventDefault();
