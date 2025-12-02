@@ -30,10 +30,11 @@ Por isso, entender como os estudantes enxergam esses espaços é essencial para 
 
 A execução do projeto está sendo organizada:
 
-1. 📄 **Elaboração e aplicação de questionários** para os alunos.  
-2. 📊 **Coleta e análise dos dados** obtidos.   
-3. 📝 **Discussão dos dados** e extração de conclusões.  
-4. 🛠️ **Uso de ferramentas** 
+1. 💻 **Criação de um site** , visando mapear as escolas
+2. 📄 **Elaboração e aplicação um formulário** para os alunos.  
+3. 📊 **Coleta dos dados obtidos**.   
+4. 📝 **Tomada de decisões a partir dos dados extraídos.  
+    
 
 
 
