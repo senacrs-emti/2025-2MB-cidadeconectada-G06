@@ -30,12 +30,25 @@ piiForm.addEventListener('submit', (e) => {
     window.scrollTo(0, 0)
 });
 
-function incompleteSend() {
-    console.log(":)")
+// teste, editar depois
+function piiSubmitForm() {
+    // piiForm.submit()
 }
 
+// teste, editar depois
+function incompleteSend() {
+    if (confirm("Você confirma suas respostas?\nAVISO: você não poderá mudá-las novamente.") == true) {
+        console.log("enviado incompleto! :)")
+        // window.location.replace("./form-sent.html");
+    }
+}
+
+// teste, editar depois
 function completeSend() {
-    console.log(":3")
+    if (confirm("Você confirma suas respostas?\nAVISO: você não poderá mudá-las novamente.") == true) {
+        console.log("enviado completo! :3")
+        // window.location.replace("./form-sent.html");
+    }
 }
 
 function checkSend() {
@@ -53,7 +66,7 @@ function checkSend() {
         mainFormSend.innerHTML = "Enviar incompleto"
         console.log(':|')
 
-        // mainFormSend.setAttribute(onclick, incompleteSend())
+        mainFormSend.setAttribute("onclick", "incompleteSend()")
     } else {
         mainFormSend.disabled = false
         mainFormSend.classList.remove('incompleto')
@@ -61,7 +74,7 @@ function checkSend() {
         mainFormSend.innerHTML = "Enviar"
         console.log(':)')
 
-        // mainFormSend.setAttribute(onclick, completeSend())
+        mainFormSend.setAttribute("onclick", "completeSend()")
     };
 }
 
@@ -70,7 +83,6 @@ function checkSend() {
 // 0: zero estrelas
 questions.forEach(question => {
     let questionValue = -1
-    console.log(`${questionValue}`);
     
     const ratingCheckboxes = question.querySelectorAll('.rating-checkbox');
     const starIcons = question.querySelectorAll('star-icon')

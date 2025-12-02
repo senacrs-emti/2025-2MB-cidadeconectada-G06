@@ -38,7 +38,6 @@
         </div>
     </header>
     <main>
-        <!--<form id="pii" style="display:none">-->
         <form id="pii" style="display:flex">
             <fieldset data-pii="1" class="pii-question">
                 <label class="pii-input-label" for="1-nome">Nome completo&nbsp;<span class="ob">*</span></label>
@@ -85,11 +84,9 @@
                     <label class="pii-radio-label" for="4-q2">Ensino Superior</label>
                 </div>
             </fieldset>
-            <button id="pii-submit" type="submit" >Avançar</button>
+            <button id="pii-submit" onclick="piiSubmitForm()">Avançar</button>
         </form>
-        
         <form id="main-form" style="display:none">
-        <!--<form id="main-form">-->
             <p class="addenda">Preencha, no mínimo, sete respostas</p>
             <p class="addenda">Comentários são opcionais, e campos em branco serão ignorados</p>
             <p id="q">Que nota de 0 a 5 estrelas você daria, em sua escola, para:</p>
