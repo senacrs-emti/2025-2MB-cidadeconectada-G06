@@ -7,7 +7,7 @@
 
 # 📘 **#02. Introdução**
 
-O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, visando compreender como eles percebem os espaços, recursos e condições do ambiente educacional.  
+O presente projeto tem como objetivo analisar a **infraestrutura escolar a partir da visão dos alunos**, com foco nas escolas públicas de Porto Alegre, visando compreender como os alunos percebem os espaços, recursos e condições do ambiente educacional.  
 A escolha do tema se justifica pela importância de ouvir quem vivencia a escola diariamente, permitindo identificar necessidades reais e contribuir para melhorias.
 
 
@@ -30,10 +30,10 @@ Por isso, entender como os estudantes enxergam esses espaços é essencial para 
 
 A execução do projeto está sendo organizada:
 
-1. 💻 **Criação de um site** , visando mapear as escolas
+1. 💻 **Criação de um site**, visando mapear as escolas públicas de Porto Alegre
 2. 📄 **Elaboração e aplicação um formulário** para os alunos.  
 3. 📊 **Coleta dos dados obtidos**.   
-4. 📝 **Tomada de decisões a partir dos dados extraídos.  
+4. 📝 **Tomada de decisões** a partir dos dados extraídos.  
     
 
 
