@@ -1,78 +1,78 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none ;
 }
 .container{
- margin-left: 20px;
+margin-left: 20px;
 
 }
 :root{
-    --black: #000000;
-    --azulescuro: #07405b;
-    --laranja: #ff7f2a;
-    --amarelofraco:#FFC83D;
-    --cinzaclaro:#d9d9d9;
-    --cinzaforte:#777777;
-    --branco: #ffffff;
+  --black: #000000;
+  --azulescuro: #07405b;
+  --laranja: #ff7f2a;
+  --amarelofraco:#FFC83D;
+  --cinzaclaro:#d9d9d9;
+  --cinzaforte:#777777;
+  --branco: #ffffff;
 
 }
 .background-azul{
-    background: var(--azulescuro);
+  background: var(--azulescuro);
 }
 
 nav{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 
 }
 
 .logo a {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--laranja);
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--laranja);
 }
 .ul{
-    display:flex;
-    align-items: center;
+  display:flex;
+  align-items: center;
 }
 .ul li{
-    margin: 0 35px;
-    font-size:15px;
+  margin: 0 35px;
+  font-size:15px;
 }
 .ul li a{
-    color: var(--branco);
+  color: var(--branco);
 }
 
 .btn-escola {
-  display: inline-block;
-  background-color: var(--amarelofraco);
-  color: white;
-  font-size: 16px;
-  padding: 10px 18px;
-  border: none;               
-  outline: none;               
-  border-radius: 8px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+display: inline-block;
+background-color: var(--amarelofraco);
+color: white;
+font-size: 16px;
+padding: 10px 18px;
+border: none;               
+outline: none;               
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
 .btn-escola:hover {
-  background-color: var(--cor-hover);
+background-color: var(--cor-hover);
 }
 
 .link-contribua {
-  font-weight: bold;
-  text-decoration: underline;
-  color: var(--laranja)
+font-weight: bold;
+text-decoration: underline;
+color: var(--laranja)
 }
 
-.container1{
+.container_home{
   margin-top: 280px;
     display:flex;
     align-items: center;
@@ -80,31 +80,14 @@ nav{
     margin-left: 20px;
 }
 
-.text-1{
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    margin-top: 100px;
-}
 
-.container2 {
-  display: flex;
-  flex-direction: column; 
-  align-items:first baseline;
-  padding: 60px 80px;
-}
-
-
-.container2 h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  
-}
 
 .textcolor{
-  background: linear-gradient(to right,#07405B, #FF7F2A);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  color: var(--azulescuro);
+    display: inline-block;
+}
+.textcolorS{
+ color: var(--laranja);
     display: inline-block;
 }
 
@@ -137,7 +120,6 @@ nav{
   background: linear-gradient(to right, #07405B, #22B2FF);
   color: white;
   border: none;
-  border-radius: 6px;
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -149,53 +131,43 @@ nav{
   background-color: #0056b3;
 }
 
-.text-objetivoalert{
-  height: auto;
-  width: auto;
-  display: flex;
-  margin-top: 500px;
-  flex-wrap: wrap;
-
+.text-objetivoalert {
+  text-align: center; 
+  max-width: 700px;
+  margin-top: -200px;
 }
+
 
 .text-description2{
    max-width: 500px;
   font-size: 18px;
   line-height: 1.5;
 
+
 }
 
 .text-objetivo{
-  display: flex;
+  display: block;
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
 }
 
-.container3 h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.container3 {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 60px 80px;
-  gap: 40px; 
-  margin-left: 800px;
-  margin-top: -500px;
-}
+
+
+
 
 .imagem-estudante{
   width: 300px;        
   margin-left: 70px;  
   margin-right: 100px; 
   display: flex;
-  margin-top: -600px;
+  margin-top: -700px;
 }
 
 .text-p h1{
-margin-top:50px;
+display:inline-block;
+margin-top: 100px;
 }
 
 .botoes2 {
@@ -230,14 +202,10 @@ margin-top:50px;
   transition: background-color 0.3s;
 
 }
-
 .botao-m {
+  width: 100%;             
   display: flex;
-
-  align-items: flex-end;
-  gap: 15px;
-  margin-left: 700px;
-  margin-top: -170px;
+  justify-content: center;  
 }
 .parte-de-baixo {
     background-color: var(--azulescuro); 
@@ -249,16 +217,87 @@ margin-top:50px;
 }
 
 .textcolor2{
-  /* background: linear-gradient(to right,#07405B, #FF7F2A);*/
-  background: linear-gradient(to right, #07085b, #f56809);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  color: var(--azulescuro);
+  display: inline-block;
+}
+.textcolor2s{
+
+  color: var(--laranja);
   display: inline-block;
 }
 .textcolor3{
-  background: linear-gradient(to right,#07405B, #FF7F2A);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+    color: var(--azulescuro);
     display: inline-block;
 }
+.textcolor3s{
+  color: var(--laranja);
+    display: inline-block;
+}
+.cont_2 h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
+.cont_2 {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 60px 80px;
+  gap: 40px;
+  margin-top: 400px;    
+  margin-right: 200px;     
+      
+}
+
+.cont_3 h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.cont_3 {
+  width: 100%;             
+  display: flex;
+  flex-direction: column;   
+  justify-content: center;
+  align-items:flex-end;
+  padding: 60px 80px;
+  gap: 40px; 
+  margin-left: 0px;    
+  margin-right: 20px;
+ margin-top: -30px;
+}
+
+.text-1{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 100px;
+}
+
+.cont_1 {
+display: block;
+flex-direction: column; 
+align-items:first baseline;
+padding: 60px 80px;
+
+}
+
+
+.cont_1 h1 {
+text-align: center;
+margin-bottom: 30px;
+
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  margin-top: 300px;
+  margin-right: 400px;
+}
+.mensagem{
+  display: block;
+  margin-top: 200px;
+}
