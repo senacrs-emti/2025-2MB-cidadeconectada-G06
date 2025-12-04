@@ -94,7 +94,7 @@ button, input {
     font-size: calc(2vw + 4px);
     text-align: center;
     line-height: calc(1.4vw - 0.5px);
-    background-color: #31b1ec;
+    background-color: #0aa3e9;
     color: white;
     border: 0;
     border-radius: 1vw;
@@ -148,7 +148,7 @@ button, input {
 }
 
 .incompleto {
-    background-color: #31b1ec;
+    background-color: #0aa3e9;
     color: white;
 }
 
@@ -364,7 +364,7 @@ fieldset {
     font-family: 'Poppins', sans-serif;
     border: 0;
     border-radius: 12px;
-    background-color: #31b1ec;
+    background-color: #0aa3e9;
     color: white;
     transition: 0.1s;
     font-size: 11pt;
@@ -421,6 +421,10 @@ fieldset {
 
 .comments input:focus {
     outline: none;
+}
+
+.comments input::placeholder {
+    font-style: italic;
 }
 
 .centre-hr {
