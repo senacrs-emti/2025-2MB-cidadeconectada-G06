@@ -49,6 +49,7 @@ function piiSubmitForm() {
 function incompleteSend() {
     if (confirm("Você confirma suas respostas?\nAVISO: você não poderá mudá-las novamente.") == true) {
         console.log("enviado incompleto! :)")
+        answeredQuestions = 0;
         // window.location.replace("./form-sent.html");
     }
 }
@@ -57,6 +58,7 @@ function incompleteSend() {
 function completeSend() {
     if (confirm("Você confirma suas respostas?\nAVISO: você não poderá mudá-las novamente.") == true) {
         console.log("enviado completo! :3")
+        answeredQuestions = 0;
         // window.location.replace("./form-sent.html");
     }
 }
@@ -69,7 +71,7 @@ function checkSend() {
         mainFormSend.innerHTML = "Enviar incompleto"
         console.log(':(')
 
-    } else if (answeredQuestions >= 7 && answeredQuestions < 12) {
+    } else if (answeredQuestions >= 7 && answeredQuestions < 16) {
         mainFormSend.disabled = false
         mainFormSend.classList.remove('completo')
         mainFormSend.classList.add('incompleto')
