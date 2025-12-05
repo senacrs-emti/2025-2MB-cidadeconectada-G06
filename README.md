@@ -13,7 +13,7 @@ A escolha do tema se justifica pela importância de ouvir quem vivencia a escola
 
 
 # 🎯 **#03. Objetivos**
-- Mapear escolas.
+- Mapear escolas públicas.
 - Analisar as perspectivas dos alunos a respeito de suas escolas. 
 - A partir dessa análise propor melhorias para aquela instituição.
 
