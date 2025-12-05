@@ -10,7 +10,7 @@ mainFormSend.classList.remove('completo')
 mainFormSend.classList.add('incompleto')
 mainFormSend.innerHTML = "Enviar incompleto"
 
-const piiSelectSchool = document.getElementById('2-escola')
+const piiSelectSchool = document.getElementById('two-escola')
 
 const qs1 = document.getElementById('qs-1');
 const qs2 = document.getElementById('qs-2');

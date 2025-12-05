@@ -12,7 +12,7 @@
             <div class="container">
                 <nav>
                     <div class="logo">
-                        <a href="index.html"> MaPOA</a>
+                        <a href="..\index.html"> MaPOA</a>
                     </div>
                     <ul class="ul">
                         <li> <a href="..\index.html">Início</a></li>
@@ -39,14 +39,25 @@
     </header>
     <main>
         <form id="pii" style="display:flex">
+            <div id="pii-addenda">
+                <p id="pii-title">Formulário para os alunos</p>
+                <p class="addenda">Primeiro, preencha suas informações pessoais.</p>
+            </div>
+            <p></p>
             <fieldset data-pii="1" class="pii-question">
                 <label class="pii-input-label" for="1-nome">Nome completo&nbsp;<span class="ob">*</span></label>
                 <input name="nome" class="pii-input" id="1-nome" type="text" required>
             </fieldset>
             
             <fieldset data-pii="2" class="pii-question">
-                <label class="pii-input-label" for="2-escola">Escola&nbsp;<span class="ob">*</span></label>
-                <select name="escola" class="pii-input" id="2-escola" list="escolas" type="text" placeholder="Selecione..." required onclick="piiSchoolList()">
+                <label class="pii-input-label" for="2-escola">
+                    Escola&nbsp;<span class="ob">*</span>
+                    <div id="two-escola-addenda">
+                        <p>Nesta caixa, você também pode digitar o nome de sua escola.</p>
+                        <p>Caso sua escola não esteja listada, selecione "Outra" e escreva o nome dela.</p>
+                    </div>
+                </label>
+                <select name="escola" class="pii-input" id="two-escola" list="escolas" type="text" placeholder="Selecione..." required onclick="piiSchoolList()">
                     <option value="" id="escolas-empty">Selecione...</option>
                     <option value="lorem">Escola Municipal Lorem</option>
                     <option value="ipsum">Escola Ipsum</option>
@@ -68,7 +79,7 @@
                     <option value="outra">Outra</option>
                 </select>
                 <div id="outra" style="display:none">
-                    <label class="pii-input-label">Insira o nome da escola:&nbsp;<span class="ob">*</span></label>
+                    <label class="pii-input-label">Escreva o nome de sua escola:&nbsp;<span class="ob">*</span></label>
                     <input class="pii-input" type="text">
                 </div>
             </fieldset>

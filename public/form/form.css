@@ -21,11 +21,18 @@
 .background-azul{
     background: var(--azulescuro);
 }
-.container{
+
+/*.container{
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto;
+}*/
+
+.container{
+margin-left: 20px;
+
 }
+
 nav{
     display:flex;
     justify-content: space-between;
@@ -210,6 +217,23 @@ form {
 #pii {
 }*/
 
+#pii-addenda {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+#pii-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #07405b;
+}
+
+#pii-addenda p + p {
+    margin-top: 8px;
+}
+
 .ob {
     color: hsla(0, 100%, 45%);
 }
@@ -222,9 +246,27 @@ fieldset {
     margin-top: 20px;
 }
 
+#two-escola + #outra {
+    margin-top: 34px;
+}
+
 .pii-input-label, .pii-input, .pii-4{
     display: block;
     margin-bottom: 12px;
+}
+
+#two-escola-addenda {
+    margin: 6px 0;
+}
+
+#two-escola-addenda p {
+    font-size: 14px;
+    color: #0f6f9b;
+    font-style: italic;
+}
+
+#two-escola-addenda p + p {
+    margin-top: 3px;
 }
 
 .pii-input {
