@@ -3,7 +3,7 @@
 - 👤 **Guilherme Rodrigues**  
 - 👤 **Mia Vieira**  
 - 👤 **Lorenzo Emiliano**   
-- 👤 **Clara Elisa** 
+- 👤 **Clara Elisa**(claraelisa.davila@gmail.com)
 
 # 📘 **#02. Introdução**
 
